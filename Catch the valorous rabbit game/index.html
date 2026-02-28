@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Catch the valorous rabbit | @coding.aayu</title>
+  <link rel="stylesheet" href="https://public.codepenassets.com/css/reset-2.0.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<!-- Loading Page -->
+<div id="loadingPage">
+  <div id="pauseButton">
+    <div class="pause-line"></div>
+    <div class="pause-line"></div>
+  </div>
+  
+  <div id="loadingContent">
+    <h1 id="gameTitle">CATCH THE RABBIT</h1>
+    <div id="presentedBy">
+      <div class="presented-text">PRESENTED BY</div>
+      <div class="author-text">@coding.aayu</div>
+    </div>
+    
+    <div id="loadingBarContainer">
+      <div id="loadingBar">
+        <div id="loadingProgress"></div>
+      </div>
+      <div id="progressDots">
+        <div class="dot active"></div>
+        <div class="dot active"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+    
+    <div id="loadingText">LOADING<span class="red-dots">...</span></div>
+  </div>
+</div>
+
+<!-- Game Content (hidden initially) -->
+<div id="gameContent" style="display: none;">
+<div id="world"></div>
+
+<div id="gameoverInstructions">Game Over</div>
+
+<div id="dist">
+  <div class="label">Distance</div>
+  <div id="distValue">000</div>
+</div>
+
+<div id="instructions">
+  Click to jump 
+  <span class="lightInstructions"> — Grab the carrots / avoid the hedgehogs</span>
+</div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r80/three.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/264161/OrbitControls.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css?family=Voltaire");
+
+/* Loading Page Styles */
+#loadingPage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #a8d8d0 0%, #c8e6e0 50%, #e0f2f1 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#pauseButton {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: #dc143c;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.pause-line {
+  width: 3px;
+  height: 20px;
+  background-color: white;
+  border-radius: 1px;
+}
+
+#loadingContent {
+  text-align: center;
+  font-family: "Voltaire", sans-serif;
+}
+
+#gameTitle {
+  font-size: 72px;
+  font-weight: bold;
+  color: #ff8c42;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+#presentedBy {
+  margin-bottom: 40px;
+}
+
+.presented-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.author-text {
+  font-size: 18px;
+  color: #444;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#loadingBarContainer {
+  margin-bottom: 20px;
+}
+
+#loadingBar {
+  width: 300px;
+  height: 8px;
+  background-color: #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 auto 15px;
+}
+
+#loadingProgress {
+  width: 65%;
+  height: 100%;
+  background: linear-gradient(90deg, #ff8c42 0%, #ffa500 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+#progressDots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.dot.active {
+  background-color: #ff8c42;
+}
+
+#loadingText {
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.red-dots {
+  color: #dc143c;
+}
+
+/* Game Styles */
+#world {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #dbe6e6;
+  overflow: hidden;
+}
+
+#gameoverInstructions {
+  position: absolute;
+  font-family: "Voltaire", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 120px;
+  text-align: center;
+  color: #ffc5a2;
+  opacity: 0;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -100%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: all 500ms ease-in-out;
+}
+#gameoverInstructions.show {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  transition: all 500ms ease-in-out;
+}
+
+#dist {
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  transform: translate(-50%, 0%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.label {
+  position: relative;
+  font-family: "Voltaire", sans-serif;
+  text-transform: uppercase;
+  color: #ffa873;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#distValue {
+  position: relative;
+  text-transform: uppercase;
+  color: #dc5f45;
+  font-size: 40px;
+  font-family: "Voltaire";
+  text-align: center;
+}
+
+#credits {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  bottom: 0;
+  margin-bottom: 20px;
+  font-family: "Voltaire", sans-serif;
+  color: #544027;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#credits a {
+  color: #544027;
+}
+
+#credits a:hover {
+  color: #dc5f45;
+}
+
+#instructions {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  margin: auto;
+  margin-bottom: 50px;
+  font-family: "Voltaire", sans-serif;
+  color: #dc5f45;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.lightInstructions {
+  color: #5f9042;
+}
